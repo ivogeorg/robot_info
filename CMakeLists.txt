@@ -139,6 +139,7 @@ add_executable(${PROJECT_NAME}_node
 	src/${PROJECT_NAME}_main.cpp)
 add_executable(agv_${PROJECT_NAME}_node
 	src/${PROJECT_NAME}_class.cpp
+	src/hydraulic_system_monitor.cpp
 	src/agv_${PROJECT_NAME}_class.cpp
 	src/agv_${PROJECT_NAME}_node.cpp)
 
