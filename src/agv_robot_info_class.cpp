@@ -14,6 +14,11 @@ AGVRobotInfo::AGVRobotInfo(ros::NodeHandle *nh, ros::Rate loop_rate,
 AGVRobotInfo::AGVRobotInfo(ros::NodeHandle *nh) : AGVRobotInfo(nh, 2, 10) {}
 
 void AGVRobotInfo::compile_info() {
-    RobotInfo::compile_info();
-    msgs_.data_field_05 = "maximum_payload: " + maximum_payload_;
+  msgs_.data_field_05 = "maximum_payload: " + maximum_payload_;
+}
+
+void AGVRobotInfo::publish_data() {
+  RobotInfo::compile_info();
+  compile_info();
+  robot_info_pub_.publish(msgs_);
 }

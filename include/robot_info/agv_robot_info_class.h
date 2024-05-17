@@ -6,21 +6,21 @@
 #include "ros/ros.h"
 #include <string>
 
-
 class AGVRobotInfo : public RobotInfo {
-    std::string maximum_payload_;
+  // Robot info
+  std::string maximum_payload_;
 
 protected:
-    void compile_info() override;
+  void compile_info() override;
 
 public:
-    AGVRobotInfo() = default;
-    AGVRobotInfo(ros::NodeHandle *, ros::Rate, int);
-    AGVRobotInfo(ros::NodeHandle *);
+  AGVRobotInfo() = default;
+  AGVRobotInfo(ros::NodeHandle *, ros::Rate, int);
+  AGVRobotInfo(ros::NodeHandle *);
 
-    ~AGVRobotInfo() = default;
+  ~AGVRobotInfo() = default;
+
+  void publish_data();
 };
-
-
 
 #endif

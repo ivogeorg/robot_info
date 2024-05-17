@@ -16,9 +16,10 @@ class RobotInfo {
   // ROS
   ros::Rate loop_rate_;
   int queue_size_;
-  ros::Publisher robot_info_pub_;
 
 protected:
+  // ROS
+  ros::Publisher robot_info_pub_;
   robotinfo_msgs::RobotInfo10Fields msgs_;
   virtual void compile_info();
 
@@ -32,7 +33,7 @@ public:
 
   ~RobotInfo() = default;
 
-  void publish_data();
+  virtual void publish_data();
   void sleep() { loop_rate_.sleep(); }
 };
 
