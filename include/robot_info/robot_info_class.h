@@ -18,9 +18,8 @@ class RobotInfo {
   int queue_size_;
   ros::Publisher robot_info_pub_;
 
-  robotinfo_msgs::RobotInfo10Fields msgs_;
-
 protected:
+  robotinfo_msgs::RobotInfo10Fields msgs_;
   virtual void compile_info();
 
 public:

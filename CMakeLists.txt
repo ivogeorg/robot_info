@@ -137,6 +137,10 @@ include_directories(
 add_executable(${PROJECT_NAME}_node
 	src/${PROJECT_NAME}_class.cpp
 	src/${PROJECT_NAME}_main.cpp)
+add_executable(agv_${PROJECT_NAME}_node
+	src/${PROJECT_NAME}_class.cpp
+	src/agv_${PROJECT_NAME}_class.cpp
+	src/agv_${PROJECT_NAME}_node.cpp)
 
 ## Rename C++ executable without prefix
 ## The above recommended prefix causes long target names, the following renames the
@@ -150,6 +154,9 @@ add_executable(${PROJECT_NAME}_node
 
 ## Specify libraries to link a library or executable target against
 target_link_libraries(${PROJECT_NAME}_node
+  ${catkin_LIBRARIES}
+)
+target_link_libraries(agv_${PROJECT_NAME}_node
   ${catkin_LIBRARIES}
 )
 
