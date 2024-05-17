@@ -20,7 +20,7 @@ public:
 
   ~AGVRobotInfo() = default;
 
-  void publish_data();
+  void publish_data() override;
 };
 
 #endif
