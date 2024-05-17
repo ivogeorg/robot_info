@@ -2,15 +2,15 @@
 #define HYDRAULIC_SYSTEM_MONITOR_H
 
 #include <string>
-#include <vector>
+#include <map>
 
 class HydraulicSystemMonitor {
-public:
-  std::string hydraulic_oil_temperature{"45C"};
-  std::string hydraulic_oil_tank_fill_level{"100%"};
-  std::string hydraulic_oil_pressure{"250 bar"};
+  std::string hydraulic_oil_temperature_{"45C"};
+  std::string hydraulic_oil_tank_fill_level_{"100%"};
+  std::string hydraulic_oil_pressure_{"250 bar"};
 
-  std::vector<std::string> pack_hydraulic_parameters();
+public:
+  std::map<std::string, std::string> get_parameters();
 };
 
 #endif
